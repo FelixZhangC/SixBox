@@ -2,8 +2,8 @@ package test;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.sos.sixbox.entity.TestEntity;
-import org.sos.sixbox.test.dao.TestDAO;
+import org.sos.sixbox.entity.FooEntity;
+import org.sos.sixbox.foo.service.FooService;
 import org.sos.sixbox.utils.Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,22 +15,20 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring-config.xml")
-public class TestDAOTest {
+public class TestFooService {
     @Autowired
-    private TestDAO testDAO;
+    private FooService fooService;
 
     @Test
     public void createTest() {
-        TestEntity testEntity = new TestEntity();
-        testEntity.setTitle("测试标题");
-        testEntity.setContent("测试内容 - " + Utils.getCurrentTimestamp());
-        testDAO.create(testEntity);
+        String bar = "BAR " + Utils.getCurrentTimestamp();
+        fooService.create(bar);
     }
 
     @Test
     public void getByIdTest() {
-        TestEntity testEntity = testDAO.getById(1);
-        String message = String.format("%d: %s", testEntity.getId(), testEntity.getContent());
+        FooEntity fooEntity = fooService.getById(1);
+        String message = String.format("%d: %s", fooEntity.getId(), fooEntity.getBar());
         System.out.println(message);
     }
 }

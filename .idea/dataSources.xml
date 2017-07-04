@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="SixBox@localhost" uuid="ba34d0d0-72ad-41f2-b700-94878734ae7b">
+    <data-source source="LOCAL" name="MySQL - SixBox@localhost" uuid="25310c00-3d00-47a1-a16e-863899b2c77f">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
