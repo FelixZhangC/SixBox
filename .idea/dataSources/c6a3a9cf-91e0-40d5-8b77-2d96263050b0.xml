@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="dataSource">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="SixBox">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="JAVAEE_EXP6"/>
+    <schema id="5" parent="1" name="JAVAEE_EXP8"/>
+    <schema id="6" parent="1" name="LabManager"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="OnlineJudge"/>
+    <schema id="9" parent="1" name="performance_schema"/>
+    <schema id="10" parent="1" name="RUNOOB"/>
+    <schema id="11" parent="1" name="SHOPDB"/>
+    <schema id="12" parent="1" name="sys"/>
+    <schema id="13" parent="1" name="test"/>
+    <table id="14" parent="2" name="foo"/>
+    <column id="15" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="16" parent="14" name="bar">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="14" name="createTime">
+      <Position>3</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="18" parent="14" name="bar">
+      <ColNames>bar</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="19" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="20" parent="14" name="bar">
+      <ColNames>bar</ColNames>
+      <UnderlyingIndexName>bar</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
